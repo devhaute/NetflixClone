@@ -3,12 +3,18 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var homeVm: HomeVM = HomeVM()
     
+    let screen = UIScreen.main.bounds
+    
     var body: some View {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView(showsIndicators: false) {
+                TopMoviePreview(movie: exampleMovie1)
+                    .frame(width: screen.width)
+                    .padding(.top, -110)
+
                 LazyVStack {
                     ForEach(homeVm.categories, id: \.self) { category in
                         VStack {
