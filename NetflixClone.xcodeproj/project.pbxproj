@@ -10,6 +10,7 @@
 		B42031CA27565F0000DF3F3A /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42031C927565F0000DF3F3A /* TopMoviePreview.swift */; };
 		B42031CC27566AEB00DF3F3A /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42031CB27566AEB00DF3F3A /* SmallVerticalButton.swift */; };
 		B42355102756364D0067E941 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423550F2756364D0067E941 /* HomeView.swift */; };
+		B452308C275B789F0015FBD4 /* TopLowButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452308B275B789F0015FBD4 /* TopLowButtons.swift */; };
 		B4B5DA0F2756339400896184 /* NetflixCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5DA0E2756339400896184 /* NetflixCloneApp.swift */; };
 		B4B5DA112756339400896184 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5DA102756339400896184 /* ContentView.swift */; };
 		B4B5DA132756339600896184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B5DA122756339600896184 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		B42031C927565F0000DF3F3A /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		B42031CB27566AEB00DF3F3A /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		B423550F2756364D0067E941 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B452308B275B789F0015FBD4 /* TopLowButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLowButtons.swift; sourceTree = "<group>"; };
 		B4B5DA0B2756339400896184 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B5DA0E2756339400896184 /* NetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneApp.swift; sourceTree = "<group>"; };
 		B4B5DA102756339400896184 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				B4C4408127563E7B00D6F13C /* HomeVM.swift */,
 				B423550F2756364D0067E941 /* HomeView.swift */,
 				B4C4407D275639BE00D6F13C /* StandardHomeMovie.swift */,
+				B452308B275B789F0015FBD4 /* TopLowButtons.swift */,
 				B42031C927565F0000DF3F3A /* TopMoviePreview.swift */,
 				B42031CB27566AEB00DF3F3A /* SmallVerticalButton.swift */,
 				B4FCD86B27579AC800160561 /* WhiteButton.swift */,
@@ -173,6 +176,7 @@
 				B42355102756364D0067E941 /* HomeView.swift in Sources */,
 				B4C4408227563E7B00D6F13C /* HomeVM.swift in Sources */,
 				B4B5DA112756339400896184 /* ContentView.swift in Sources */,
+				B452308C275B789F0015FBD4 /* TopLowButtons.swift in Sources */,
 				B4C4407E275639BE00D6F13C /* StandardHomeMovie.swift in Sources */,
 				B42031CA27565F0000DF3F3A /* TopMoviePreview.swift in Sources */,
 				B4C4407C2756391700D6F13C /* Movie.swift in Sources */,
