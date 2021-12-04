@@ -34,7 +34,22 @@ struct MovieDetail: View {
                                 .bold()
                                 .font(.headline)
                         }
+                        
+                        PlayButton(text: "Play", imageName: "play.fill", backgroundColor: .red) {
+                            // action
+                        }
+                        
+                        // Current Episode Information
+                        VStack(alignment: .leading, spacing: 0) {
+                            Divider().frame(height: 0).opacity(0)
+                            CurrentEpisodeInformation(movie: movie)
+                            
+                            CastInfoView(movie: movie)
+                                .padding(.vertical)
+                        }
+                        
                     }
+                    .padding(.horizontal)
                 }
                 
                 

@@ -1,10 +1,11 @@
 import SwiftUI
 
-struct WhiteButton: View {
-    let text: String
-    let imageName: String
+struct PlayButton: View {
+    var text: String
+    var imageName: String
+    var backgroundColor: Color = .white
     
-    let action: () -> Void
+    var action: () -> Void
     
     var body: some View {
         Button {
@@ -22,21 +23,21 @@ struct WhiteButton: View {
                 
                 Spacer()
             }
-            .foregroundColor(.black)
+            .foregroundColor(backgroundColor == .white ? .black : .white)
             .padding(.vertical, 6)
-            .background(Color.white)
+            .background(backgroundColor)
             .cornerRadius(3)
         }
     }
 }
 
-struct WhiteButton_Previews: PreviewProvider {
+struct PlayButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            WhiteButton(text: "Play", imageName: "play.fill") {
+            PlayButton(text: "Play", imageName: "play.fill", backgroundColor: .red) {
                 //
             }
         }
