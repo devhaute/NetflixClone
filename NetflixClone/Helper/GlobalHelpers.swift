@@ -12,6 +12,7 @@ let exampleMovie1 = Movie(
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
     cast: "Watch Season 6 Now",
+    moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4],
     promotionHeadLine: "New episodes coming soon"
 )
 let exampleMovie2 = Movie(
@@ -23,7 +24,8 @@ let exampleMovie2 = Movie(
     rating: "TV-MA",
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
-    cast: "Watch Season 6 Now"
+    cast: "Watch Season 6 Now",
+    moreLikeThisMovies: []
 )
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
@@ -34,7 +36,8 @@ let exampleMovie3 = Movie(
     rating: "TV-MA",
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
-    cast: "Watch Season 6 Now"
+    cast: "Watch Season 6 Now",
+    moreLikeThisMovies: []
 )
 let exampleMovie4 = Movie(
     id: UUID().uuidString,
@@ -47,6 +50,7 @@ let exampleMovie4 = Movie(
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
     cast: "Watch Season 6 Now",
+    moreLikeThisMovies: [],
     promotionHeadLine: "Watch Season 2 Now"
 )
 let exampleMovie5 = Movie(
@@ -57,7 +61,8 @@ let exampleMovie5 = Movie(
     year: 2020, rating: "TV-MA",
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
-    cast: "Watch Season 6 Now"
+    cast: "Watch Season 6 Now",
+    moreLikeThisMovies: []
 )
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
@@ -68,7 +73,8 @@ let exampleMovie6 = Movie(
     rating: "TV-MA",
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
-    cast: "Watch Season 6 Now"
+    cast: "Watch Season 6 Now",
+    moreLikeThisMovies: []
 )
 
 let exampleMovies: [Movie] = [
@@ -78,7 +84,7 @@ let exampleMovies: [Movie] = [
     exampleMovie4,
     exampleMovie5,
     exampleMovie6,
-]
+].shuffled()
 
 let exampleEpisodeInfo = CurrentEpisodeInfo(episodeName: "Endings and Beginnings", description: "On the day of the apocalypse, Clausen executes a search warrant at the power plant as Jonas and Claudia use the time machine to connect past and future.", season: 2, episode: 4)
 

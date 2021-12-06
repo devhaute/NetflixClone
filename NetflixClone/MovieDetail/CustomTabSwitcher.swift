@@ -7,6 +7,8 @@ enum CustomTab: String, CaseIterable {
 }
 
 struct CustomTabSwitcher: View {
+    var movie: Movie
+    
     @State private var currentTab: CustomTab = CustomTab.allCases[0]
     
     var body: some View {
@@ -39,7 +41,8 @@ struct CustomTabSwitcher: View {
             case .trailers:
                 Text("trailers")
             case .more:
-                Text("more")
+                MoreLikeThis(movies: movie.moreLikeThisMovies)
+                    .padding(5)
             }
         }
         .foregroundColor(.white)
@@ -52,7 +55,7 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(.all)
 
-            CustomTabSwitcher()
+            CustomTabSwitcher(movie: exampleMovie1)
         }
     }
 }
