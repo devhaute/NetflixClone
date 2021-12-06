@@ -9,7 +9,7 @@ struct Episode: Identifiable {
     var description: String
     var length: Int
     
-    var thumnailURL: URL {
+    var thumbnailURL: URL {
         URL(string: thumbnailImageURLString)!
     }
 }
