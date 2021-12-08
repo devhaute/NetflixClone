@@ -1,5 +1,8 @@
 import SwiftUI
 
+let exampleVideoURL: URL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4")!
+let exampleImageURL: URL = URL(string: "https://picsum.photos/300/104")!
+
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
     name: "DARK",
