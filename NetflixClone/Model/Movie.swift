@@ -18,6 +18,7 @@ struct Movie: Identifiable {
     var creators: String
     var cast: String
     
+    var trailers : [Trailer]
     var moreLikeThisMovies: [Movie]
     
     var episode: [Episode]?

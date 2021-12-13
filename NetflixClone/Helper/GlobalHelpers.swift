@@ -2,6 +2,20 @@ import SwiftUI
 
 let exampleVideoURL: URL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4")!
 let exampleImageURL: URL = URL(string: "https://picsum.photos/300/104")!
+let exampleImageURL2: URL = URL(string: "https://picsum.photos/300/105")!
+let exampleImageURL3: URL = URL(string: "https://picsum.photos/300/106")!
+
+var randomExampleImageURL: URL {
+    [exampleImageURL, exampleImageURL2, exampleImageURL3].randomElement() ?? exampleImageURL
+}
+
+let exampleTrailer1: Trailer = Trailer(name: "Season 3 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: randomExampleImageURL)
+let exampleTrailer2: Trailer = Trailer(name: "The Hero`s Journey", videoURL: exampleVideoURL, thumbnailImageURL: randomExampleImageURL)
+let exampleTrailer3: Trailer = Trailer(name: "The Mysterious", videoURL: exampleVideoURL, thumbnailImageURL: randomExampleImageURL)
+
+let exampleTrailers: [Trailer] = [
+    exampleTrailer1, exampleTrailer2, exampleTrailer3
+]
 
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
@@ -15,6 +29,7 @@ let exampleMovie1 = Movie(
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
     cast: "Watch Season 6 Now",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4],
     promotionHeadLine: "New episodes coming soon"
 )
@@ -28,6 +43,7 @@ let exampleMovie2 = Movie(
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
     cast: "Watch Season 6 Now",
+    trailers: exampleTrailers,
     moreLikeThisMovies: []
 )
 let exampleMovie3 = Movie(
@@ -40,6 +56,7 @@ let exampleMovie3 = Movie(
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
     cast: "Watch Season 6 Now",
+    trailers: exampleTrailers,
     moreLikeThisMovies: []
 )
 let exampleMovie4 = Movie(
@@ -53,6 +70,7 @@ let exampleMovie4 = Movie(
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
     cast: "Watch Season 6 Now",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [],
     promotionHeadLine: "Watch Season 2 Now"
 )
@@ -65,6 +83,7 @@ let exampleMovie5 = Movie(
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
     cast: "Watch Season 6 Now",
+    trailers: exampleTrailers,
     moreLikeThisMovies: []
 )
 let exampleMovie6 = Movie(
@@ -77,6 +96,7 @@ let exampleMovie6 = Movie(
     defaultCurrentEpisode: exampleEpisodeInfo,
     creators: "Louis Hofmann, Oliver Mascucci, jordis Triebel",
     cast: "Watch Season 6 Now",
+    trailers: exampleTrailers,
     moreLikeThisMovies: []
 )
 
