@@ -4,6 +4,9 @@ struct MovieDetail: View {
     let movie: Movie
     let screen = UIScreen.main.bounds
     
+    @State private var showSeasonPicker = false
+    @State private var selectedSeason = 1
+    
     var body: some View {
         ZStack {
             Color.black
