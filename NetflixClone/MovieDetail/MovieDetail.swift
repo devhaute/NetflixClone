@@ -68,7 +68,7 @@ struct MovieDetail: View {
                         }
                         .padding(.leading, 20)
                         
-                         CustomTabSwitcher(movie: movie)
+                        CustomTabSwitcher(movie: movie, showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason)
                         
                     }
                     .padding(.horizontal)
@@ -78,6 +78,47 @@ struct MovieDetail: View {
                 Spacer()
             }
             .foregroundColor(.white)
+            
+            if showSeasonPicker {
+                ZStack {    
+                    Color.black
+                    
+                    VStack {
+                        Spacer()
+                        
+                        VStack(spacing: 30) {
+                            ForEach(0..<movie.numberOfSeasons!) { seasonNumber in
+                                Button {
+                                    withAnimation {
+                                        selectedSeason = seasonNumber + 1
+                                        showSeasonPicker = false
+                                    }
+                                } label: {
+                                    Text("Season \(seasonNumber + 1)")
+                                        .foregroundColor(selectedSeason == seasonNumber + 1 ? .white : .gray)
+                                        .bold()
+                                        .font(selectedSeason == seasonNumber + 1 ? .title : .title2)
+                                }
+
+                            }
+                        }
+                            
+                        Spacer()
+                        
+                        Button {
+                            self.showSeasonPicker = false
+                        } label: {
+                            Image(systemName: "x.circle.fill")
+                                .foregroundColor(.white)
+                                .font(.system(size: 40))
+                                .scaleEffect(x: 1.1)
+                        }
+                        .padding(.bottom, 30)
+
+                    }
+                    .foregroundColor(.white)
+                }
+            }
         }
     }
 }

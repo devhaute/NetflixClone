@@ -21,7 +21,7 @@ struct Movie: Identifiable {
     var trailers : [Trailer]
     var moreLikeThisMovies: [Movie]
     
-    var episode: [Episode]?
+    var episodes: [Episode]?
     
     var promotionHeadLine: String?
 }

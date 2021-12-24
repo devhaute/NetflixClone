@@ -11,6 +11,9 @@ struct CustomTabSwitcher: View {
     
     @State private var currentTab: CustomTab = CustomTab.allCases[0]
     
+    @Binding var showSeasonPicker: Bool
+    @Binding var selectedSeason: Int
+    
     var body: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
@@ -37,7 +40,7 @@ struct CustomTabSwitcher: View {
             
             switch currentTab {
             case .episode:
-                Text("episode")
+                EpisodesView(episodes: movie.episodes ?? [], showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason)
             case .trailers:
                 TrailerList(trailers: movie.trailers)
             case .more:
@@ -55,7 +58,7 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(.all)
 
-            CustomTabSwitcher(movie: exampleMovie1)
+            CustomTabSwitcher(movie: exampleMovie1, showSeasonPicker: .constant(false), selectedSeason: .constant(1))
         }
     }
 }

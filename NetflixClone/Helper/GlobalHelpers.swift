@@ -45,6 +45,7 @@ let exampleMovie1 = Movie(
     cast: "Watch Season 6 Now",
     trailers: exampleTrailers,
     moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4],
+    episodes: allExampleEpisodes,
     promotionHeadLine: "New episodes coming soon"
 )
 let exampleMovie2 = Movie(
